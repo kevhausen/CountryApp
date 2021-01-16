@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">CountryApp</string>
     <string name="paises_del_mundo">Paises del Mundo</string>
+    <string name="reintentar">Reintentar</string>
+    <string name="no_es_posible_obtener_los_datos_no_hay_conexion_a_internet">No es posible obtener los datos. No hay conexion a internet</string>
 </resources>

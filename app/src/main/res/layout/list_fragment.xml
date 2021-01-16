@@ -6,6 +6,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
+        android:id="@+id/text_retry_connection"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/no_es_posible_obtener_los_datos_no_hay_conexion_a_internet"
+        app:layout_constraintStart_toStartOf="@id/button_retry_connection"
+        app:layout_constraintEnd_toEndOf="@id/button_retry_connection"
+        app:layout_constraintBottom_toTopOf="@id/button_retry_connection"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/button_retry_connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gray"
+        android:text="@string/reintentar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"/>
+    <ProgressBar
+        android:id="@+id/progress_retry_connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/button_retry_connection"
+        app:layout_constraintEnd_toEndOf="@id/button_retry_connection"
+        app:layout_constraintTop_toBottomOf="@id/button_retry_connection"
+        android:visibility="gone"/>
+
+    <TextView
         android:id="@+id/country_static_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

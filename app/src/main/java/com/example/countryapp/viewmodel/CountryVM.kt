@@ -1,5 +1,7 @@
 package com.example.countryapp.viewmodel
 
+import android.accounts.NetworkErrorException
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -20,10 +22,9 @@ class CountryVM:ViewModel() {
 
     fun getErrorMessage():LiveData<String> = repository.errorMessage
 
+
+
     //con estos dos metodos, hacemos las llamadas a la api y las guardamos en db
-    init{
-        insertCountryDataIntoDB()
-    }
 
     //este puede que lo ponga en el init, ya que siempre necesitare al principio los nombres de paises
     fun insertCountryDataIntoDB(){
@@ -31,7 +32,6 @@ class CountryVM:ViewModel() {
             repository.getCountriesFromWebIntoDB()
         }
     }
-
     fun insertCountryDetailDataIntoDB(name:String){
         viewModelScope.launch {
             repository.getCountryDetailFromWebIntoDB(name)

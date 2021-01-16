@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
+import android.provider.Settings
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -33,13 +34,14 @@ class MainActivity : AppCompatActivity() {
                 Log.d("AirplaneMode", "Service state changed");
                 val isAirplaneModeOn = intent!!.getBooleanExtra("state", false)
                 if (isAirplaneModeOn) {
-                    Toast.makeText(this@MainActivity,"airplane mode on",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, "airplane mode on", Toast.LENGTH_SHORT).show()
                 } else {
-                    Toast.makeText(this@MainActivity,"airplane mode off",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, "airplane mode off", Toast.LENGTH_SHORT).show()
                 }
             }
         }
         this.registerReceiver(receiver, intentFilter)
     }
+
 
 }
