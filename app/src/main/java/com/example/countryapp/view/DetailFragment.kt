@@ -55,14 +55,29 @@ class DetailFragment:Fragment() {
                             txtCapital.text = countryDetail.capital
                             txtDomain.text = countryDetail.topLevelDomain.toString()
                             txtGentilicio.text = countryDetail.demonym
-                            txtGini.text = countryDetail.gini.toString()
-                            txtIdioma.text = countryDetail.languages.toString()
-                            txtMoneda.text = countryDetail.currencies.toString()
+
+                            if(countryDetail.gini!=null){
+                                txtGini.text = countryDetail.gini.toString()
+                            }
+
+
+                            val languages= mutableListOf<String>()
+                            for(idioma in countryDetail.languages!!){
+                                idioma.name?.let { it1 -> languages.add(it1) }
+                            }
+                            txtIdioma.text = languages.toString()
+
+                            val nameCurrency= mutableListOf<String>()
+                            for (currency in countryDetail.currencies!!){
+                                currency.name?.let { it1 -> nameCurrency.add(it1) }
+                            }
+                            txtMoneda.text = nameCurrency.toString()
                             txtPopulation.text = countryDetail.population.toString()
                             txtPrefijo.text = countryDetail.callingCodes.toString()
                             txtRegion.text = countryDetail.region
                             txtSubregion.text = countryDetail.subregion
                             txtTimezone.text = countryDetail.timezones.toString()
+
                             txtVecinos.text = countryDetail.borders.toString()
                             GlideToVectorYou.justLoadImage(
                                 activity,

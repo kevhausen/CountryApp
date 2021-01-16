@@ -169,7 +169,7 @@
                 app:layout_constraintStart_toEndOf="@id/static_gini"
                 app:layout_constraintTop_toTopOf="@id/static_gini"
                 app:layout_constraintBottom_toBottomOf="@id/static_gini"
-                android:text="@string/santiago"/>
+                android:text="@string/no_hay_registros"/>
 
             <TextView
                 android:id="@+id/static_vecinos"

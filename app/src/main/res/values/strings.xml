@@ -20,4 +20,5 @@
     <string name="alphacode">AlphaCode:</string>
     <string name="dominio_internet">Dominio Internet:</string>
     <string name="moneda">Moneda:</string>
+    <string name="no_hay_registros">No hay registros</string>
 </resources>
