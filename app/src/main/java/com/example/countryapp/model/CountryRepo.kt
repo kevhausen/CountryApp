@@ -34,7 +34,7 @@ class CountryRepo {
 
 
     //esto extrae de la api los nombres de paises y los guarda en db
-    suspend fun getCountriesFromWebIntoDB() {
+    suspend fun setCountriesFromWebIntoDB() {
         val response = retrofit.getAllCountries()
         when (response.isSuccessful) {
             true -> response.body()?.let { dao.insertCountryNamesDB(it) }
@@ -49,14 +49,18 @@ class CountryRepo {
 
 
     //esto es cuando el usuario hace click en un pais, extraer los detalles desde internet y meterlos en la db
-    suspend fun getCountryDetailFromWebIntoDB(name: String) {
-        val response = retrofit.getDetailCountryByName(name)
+    suspend fun setCountryDetailFromWebIntoDB(country:Country) {
+        val response = retrofit.getDetailCountryByName(country.name)
         when (response.isSuccessful) {
-            true -> response.body()?.let { dao.insertCountryDetail(it) }
-            false -> Log.d(TAG, "getCountriesFromWebIntoDB: ")
+            true -> response.body()?.let { dao.insertCountryDetail(it[0]) }
+            false -> errorMessage.value=response.errorBody().toString()
         }
     }
 
     //esto pide los detalles del pais solicitado desde la db
-    fun getCountryDetail(name: String): LiveData<CountryDetail> = dao.getCountryDetailByNameDB(name)
+    fun getCountryDetail(country: Country): LiveData<CountryDetail> = dao.getCountryDetailByNameDB(country.name)
+
+
+
+
 }

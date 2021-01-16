@@ -13,7 +13,7 @@ interface CountryApi {
     suspend fun getAllCountries(): Response<List<Country>>
 
     @GET("name/{name}")
-    suspend fun getDetailCountryByName(@Path("name")name:String):Response<CountryDetail>
+    suspend fun getDetailCountryByName(@Path("name")name:String):Response<List<CountryDetail>>
 
 
 }

@@ -74,7 +74,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    //Picasso
-    implementation 'com.squareup.picasso:picasso:2.71828'
+    //load svg images
+    implementation 'com.github.corouteam:GlideToVectorYou:v2.0.0'
 
 }

@@ -3,4 +3,21 @@
     <string name="paises_del_mundo">Paises del Mundo</string>
     <string name="reintentar">Reintentar</string>
     <string name="no_es_posible_obtener_los_datos_no_hay_conexion_a_internet">No es posible obtener los datos. No hay conexion a internet</string>
+    <string name="chile">Chile</string>
+    <string name="capital">Capital:</string>
+    <string name="santiago">Santiago</string>
+    <string name="region">Region:</string>
+    <string name="subregion">Subregion:</string>
+    <string name="population">Poblacion:</string>
+    <string name="gentilicio">Gentilicio:</string>
+    <string name="area">Superficie en m2:</string>
+    <string name="vecinos">Vecinos:</string>
+    <string name="currencies">Moneda:</string>
+    <string name="languages">Idioma:</string>
+    <string name="gini">GINI:</string>
+    <string name="timezone">Timezone:</string>
+    <string name="prefijo_celular">Prefijo Celular:</string>
+    <string name="alphacode">AlphaCode:</string>
+    <string name="dominio_internet">Dominio Internet:</string>
+    <string name="moneda">Moneda:</string>
 </resources>
